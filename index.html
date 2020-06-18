@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +15,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/addons/datatables.min.css" rel="stylesheet">
   </head>
-
   <body>
     <div class="container text-center my-4">
-
       <p class="font-weight-bold"><h1>Pengingat Ulang Tahun</h1></p>
       <p> What Day Is It ? </p> <p id="tudey"></p>
       <!-- Table  -->
@@ -27,17 +24,14 @@
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
-            <th class="th-sm">WOIIIIIIIIIIIIIIIIIII</th>
             <th class="th-sm">Nama</th>
-            <th class="th-sm">Unit Eselon II</th>
+            <th class="th-sm">Tanggal Lahir</th>
+            <th class="th-sm">Sisa Hari</th>
           </tr>
         </thead>
         <!-- Table head -->
-
         <!-- Table body -->
         <tbody id="demo">
-
-
         </tbody>
         <!-- Table body -->
       </table>
@@ -47,11 +41,8 @@
       </p>
     </div>
       
-
     <!-- Start your project here-->
-
     <!-- /Start your project here-->
-
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -71,7 +62,6 @@
 
         var i;
         for (i = 0; i < sheetData.length; i++) {
-
           var name = data.feed.entry[i]['gsx$_cn6ca']['$t'];
           var age = data.feed.entry[i]['gsx$_cokwr']['$t'];
           var email = data.feed.entry[i]['gsx$_cpzh4']['$t'];
@@ -82,7 +72,7 @@ $('#dtBasicExample').DataTable({
 });
 $('.dataTables_length').addClass('bs-select');
 });
-          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + satu + '</td>' + '<td>' + dua + '</td>' + '<td>' + tiga + '</td>' + '</tr>');
+          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + name + '</td>' + '<td>' + age + '</td>' + '<td>' + email + '</td>' + '</tr>');
       
         }
       });
@@ -91,5 +81,4 @@ var d = new Date();
 document.getElementById("tudey").innerHTML = d;
     </script>
   </body>
-
 </html>
