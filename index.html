@@ -62,9 +62,15 @@
 
         var i;
         for (i = 0; i < sheetData.length; i++) {
-          var name = data.feed.entry[i]['gsx$_cn6ca']['$t'];
-          var age = data.feed.entry[i]['gsx$_cokwr']['$t'];
-          var email = data.feed.entry[i]['gsx$_cre1l']['$t'];
+          var satu = data.feed.entry[i]['gsx$_cn6ca']['$t'];
+          var dua = data.feed.entry[i]['gsx$_cokwr']['$t'];
+          var tiga = data.feed.entry[i]['gsx$_cre1l']['$t'];
+					var empat = data.feed.entry[i]['gsx$_chk2m']['$t'];
+          var lima = data.feed.entry[i]['gsx$_ciyn3']['$t'];
+          var enam = data.feed.entry[i]['gsx$_ckd7g']['$t'];
+          var tujuh = data.feed.entry[i]['gsx$_clrrx']['$t'];
+					var delapan = data.feed.entry[i]['gsx$_cyevm']['$t'];
+					var sembilan = data.feed.entry[i]['gsx$_cztg3']['$t'];					
           
           $(document).ready(function () {
 $('#dtBasicExample').DataTable({
@@ -72,7 +78,7 @@ $('#dtBasicExample').DataTable({
 });
 $('.dataTables_length').addClass('bs-select');
 });
-          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + name + '</td>' + '<td>' + age + '</td>' + '<td>' + email + '</td>' + '</tr>');
+          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + satu + '</td>' + '<td>' + dua + '</td>' + '<td>' + tiga + '</td>' + '<td>' + empat + '</td>' + '<td>' + lima + '</td>' + '<td>' + enam + '</td>' + '<td>' + tujuh + '</td>' + '<td>' + delapan + '</td>' + '<td>' + sembilan + '</td>' + '</tr>');
       
         }
       });
