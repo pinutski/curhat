@@ -24,7 +24,7 @@
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
-            <th class="th-sm">TimeStamp</th>
+            <th class="th-sm">Stamp waktu</th>
             <th class="th-sm">Identitas Ngasal</th>
             <th class="th-sm">SURHATAN</th>
           </tr>
@@ -53,7 +53,7 @@
 
 
     <script type="text/javascript">
-      $.getJSON("https://spreadsheets.google.com/feeds/list/1NHbZFg7PGQqubU_oVIJBL42ZvJqc5j-_ivWd8dITOxg/od6/public/values?alt=json", function(data) {
+      $.getJSON("https://spreadsheets.google.com/feeds/list/1Onie_ohbW4MnD2Xplo88NIFjDA3llDhkiow2MdMhVHo/od6/public/values?alt=json", function(data) {
 
         var sheetData = data.feed.entry;
 
@@ -61,7 +61,7 @@
         for (i = 0; i < sheetData.length; i++) {
           var satu = data.feed.entry[i]['gsx$_cn6ca']['$t'];
           var dua = data.feed.entry[i]['gsx$_cokwr']['$t'];
-          var tiga = data.feed.entry[i]['gsx$_cre1l']['$t'];				
+          var tiga = data.feed.entry[i]['gsx$_cpzh4']['$t'];				
           
           $(document).ready(function () {
 $('#dtBasicExample').DataTable({
