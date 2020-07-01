@@ -58,21 +58,6 @@
 
 
     <script type="text/javascript">
-      $(document).ready( function () {
-  
-  
-  var table = $('#dtBasicExample').DataTable({
-    dom: 'lrtip'
-  });
-  
-  $('#dtBasicExample').hide();
-  
-  
-  $('#mySearch').keyup( function() {
-     $('#dtBasicExample').show();
-     table.search($(this).val()).draw();
-  } );
-} );
       $.getJSON("https://spreadsheets.google.com/feeds/list/11Bhwicbd0h7cCUgSThUc35CX5HRwzRKaKFa73Aab-oo/3/public/values?alt=json", function(data) {
 
         var sheetData = data.feed.entry;
@@ -116,6 +101,21 @@ $('.dataTables_length').addClass('bs-select');
 $.fn.dataTable.ext.errMode = 'none';
 var d = new Date();
 document.getElementById("tudey").innerHTML = d;
+      $(document).ready( function () {
+  
+  
+  var table = $('#dtBasicExample').DataTable({
+    dom: 'lrtip'
+  });
+  
+  $('#dtBasicExample').hide();
+  
+  
+  $('#mySearch').keyup( function() {
+     $('#dtBasicExample').show();
+     table.search($(this).val()).draw();
+  } );
+} );
     </script>
   </body>
 </html>
