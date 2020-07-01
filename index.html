@@ -11,6 +11,7 @@
     <link href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css" rel="stylesheet">  
   </head>
   <body>
+    <input type="text" id="mySearch" placeholder="custom search">
       <!-- Table  -->
       <table id="dtBasicExample" class="table table-sm stripe hover row-border order-column" cellspacing="0" width="100%">
         <!-- Table head -->
@@ -100,6 +101,21 @@ $('.dataTables_length').addClass('bs-select');
 $.fn.dataTable.ext.errMode = 'none';
 var d = new Date();
 document.getElementById("tudey").innerHTML = d;
+$(document).ready( function () {
+  
+  
+  var table = $('#dtBasicExample').DataTable({
+    dom: 'lrtip'
+  });
+  
+  $('#dtBasicExample_wrapper').hide();
+  
+  
+  $('#mySearch').keyup( function() {
+     $('#dtBasicExample_wrapper').show();
+     table.search($(this).val()).draw();
+  } );
+} );
     </script>
   </body>
 </html>
