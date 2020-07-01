@@ -11,7 +11,6 @@
     <link href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css" rel="stylesheet">  
   </head>
   <body>
-    <input type="text" id="mySearch" placeholder="No. ST">
       <!-- Table  -->
       <table id="dtBasicExample" class="table table-sm stripe hover row-border order-column" cellspacing="0" width="100%">
         <!-- Table head -->
@@ -20,7 +19,7 @@
             <th class="th-sm">No.</th>
             <th class="th-sm">Nama</th>
             <th class="th-sm">Pembebanan Dipa</th>
-            <th class="th-sm">Nomorr ST</th>
+            <th class="th-sm">No. ST</th>
             <th class="th-sm">Jenis Perjadin</th>
             <th class="th-sm">Uang Muka</th>
             <th class="th-sm">Kendaraan Dinas</th>
@@ -98,19 +97,7 @@ $('.dataTables_length').addClass('bs-select');
       
         }
       });
-      $.fn.dataTable.ext.errMode = 'none';
-var table = $('#dtBasicExample').DataTable({
-    dom: 'lrtip'
-  });
-  
-  $('#dtBasicExample').hide();
-  
-  
-  $('#mySearch').keyup( function() {
-     $('#dtBasicExample').show();
-     table.search($(this).val()).draw();
-  } );
-} );      
+      $.fn.dataTable.ext.errMode = 'none';    
     </script>
   </body>
 </html>
