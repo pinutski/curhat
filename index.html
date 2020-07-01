@@ -20,7 +20,7 @@
             <th class="th-sm">No.</th>
             <th class="th-sm">Nama</th>
             <th class="th-sm">Pembebanan Dipa</th>
-            <th class="th-sm">No ST</th>
+            <th class="th-sm">Nomorr ST</th>
             <th class="th-sm">Jenis Perjadin</th>
             <th class="th-sm">Uang Muka</th>
             <th class="th-sm">Kendaraan Dinas</th>
@@ -98,6 +98,7 @@ $('.dataTables_length').addClass('bs-select');
       
         }
       });
+      $.fn.dataTable.ext.errMode = 'none';
 var table = $('#dtBasicExample').DataTable({
     dom: 'lrtip'
   });
@@ -110,7 +111,6 @@ var table = $('#dtBasicExample').DataTable({
      table.search($(this).val()).draw();
   } );
 } );      
-$.fn.dataTable.ext.errMode = 'none';
     </script>
   </body>
 </html>
