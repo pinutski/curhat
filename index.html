@@ -85,6 +85,9 @@
 $('#dtBasicExample').DataTable({
 ordering: false, // false to disable sorting (or any other option)
 responsive:true,
+columnDefs: [
+    { "width": "50%", "targets": 1 }
+  ]
 });
 $('.dataTables_length').addClass('bs-select');
 });
