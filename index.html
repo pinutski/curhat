@@ -20,11 +20,26 @@
       <p class="font-weight-bold"><h1>Curhat Anonymous</h1></p>
       <p> What Day Is It ? </p> <p id="tudey"></p>
       <!-- Table  -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPoVennZbONXlMViw3ixlSD8ZDSovy2pyiqSjhO8Fiba8GRA/viewform?embedded=true" width="100%" height="300" frameborder="2" marginheight="0" marginwidth="0">Loading…</iframe>
       <table id="dtBasicExample" class="table table-bordered table-striped table-sm">
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
+            <th class="th-sm">Timestamp</th>
+            <th class="th-sm">Nama anonim</th>
+            <th class="th-sm">Curhatan</th>
+            <th class="th-sm">Timestamp</th>
+            <th class="th-sm">Nama anonim</th>
+            <th class="th-sm">Curhatan</th>
+            <th class="th-sm">Timestamp</th>
+            <th class="th-sm">Nama anonim</th>
+            <th class="th-sm">Curhatan</th>
+            <th class="th-sm">Timestamp</th>
+            <th class="th-sm">Nama anonim</th>
+            <th class="th-sm">Curhatan</th>
+             <th class="th-sm">Curhatan</th>
+            <th class="th-sm">Timestamp</th>
+            <th class="th-sm">Nama anonim</th>
+            <th class="th-sm">Curhatan</th>
             <th class="th-sm">Timestamp</th>
             <th class="th-sm">Nama anonim</th>
             <th class="th-sm">Curhatan</th>
@@ -60,9 +75,25 @@
 
         var i;
         for (i = 0; i < sheetData.length; i++) {
-          var satu = data.feed.entry[i]['gsx$_cn6ca']['$t'];
-          var dua = data.feed.entry[i]['gsx$_cokwr']['$t'];
-          var tiga = data.feed.entry[i]['gsx$_cpzh4']['$t'];				
+          var satu = data.feed.entry[i]['gsx$no']['$t'];
+          var dua = data.feed.entry[i]['gsx$nama']['$t'];
+          var tiga = data.feed.entry[i]['gsx$pembebanandipa']['$t'];
+          var empat = data.feed.entry[i]['gsx$nost']['$t'];
+          var lima = data.feed.entry[i]['gsx$jenisperjadin']['$t'];
+          var enam = data.feed.entry[i]['gsx$uangmuka']['$t'];
+          var tujuh = data.feed.entry[i]['gsx$kendaraandinas']['$t'];
+          var delapan = data.feed.entry[i]['gsx$biayataksi']['$t'];
+          var sembilan = data.feed.entry[i]['gsx$biayatiketberangkat']['$t'];
+          var sepuluh = data.feed.entry[i]['gsx$biayatiketpulang']['$t'];
+          var sebelas = data.feed.entry[i]['gsx$biayapenginapan']['$t'];
+          var duabelas = data.feed.entry[i]['gsx$uangharian']['$t'];
+          var tigabelas = data.feed.entry[i]['gsx$total']['$t'];
+          var empatbelas = data.feed.entry[i]['gsx$belumdibayar']['$t'];
+          var limabelas = data.feed.entry[i]['gsx$sudahdibayar']['$t'];
+          var enambelas = data.feed.entry[i]['gsx$statuskelengkapandokumen']['$t'];
+          var tujuhbelas = data.feed.entry[i]['gsx$statuspembayaran']['$t'];
+          var delapanbelas = data.feed.entry[i]['gsx$laporanpelaksanaankegiatan']['$t'];
+          var sembilanbelas = data.feed.entry[i]['gsx$keterangan']['$t'];
           
           $(document).ready(function () {
 $('#dtBasicExample').DataTable({
@@ -70,7 +101,7 @@ $('#dtBasicExample').DataTable({
 });
 $('.dataTables_length').addClass('bs-select');
 });
-          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + satu + '</td>' + '<td>' + dua + '</td>' + '<td>' + tiga + '</td>' +'</tr>');
+          document.getElementById('demo').innerHTML += ('<tr>' + '<td>' + satu + '</td>' + '<td>' + dua + '</td>' + '<td>' + tiga + '</td>' +'<td>' + empat + '</td>' + '<td>' + lima + '</td>' + '<td>' + enam + '</td>' + '<td>' + tujuh + '</td>' + '<td>' + delapan + '</td>' + '<td>' + sembilan + '</td>' +'<td>' + sepuluh + '</td>' + '<td>' + sebelas + '</td>' + '<td>' + duabelas + '</td>' + '<td>' + tigabelas + '</td>' + '<td>' + empatbelas + '</td>' + '<td>' + limabelas + '</td>' +'<td>' + enambelas + '</td>' + '<td>' + tujuhbelas + '</td>' + '<td>' + delapanbelas + '</td>' + '<td>' + sembilanbelas + '</td>' + '</tr>');
       
         }
       });
