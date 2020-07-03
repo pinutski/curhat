@@ -104,6 +104,9 @@ var table = $('#dtBasicExample').DataTable({
 "bInfo" :false,
 "bPaginate" :false,
 "dom":"ftip",
+"columnDefs": [
+    { "searchable": true, "targets": 3 }
+  ]
 "language": {
             "search": "Masukan No. ST :"
         },
