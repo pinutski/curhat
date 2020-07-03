@@ -16,7 +16,7 @@
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
-            <th class="th-sm">No</th>
+            <th class="th-sm">No.</th>
             <th class="th-sm">Nama</th>
             <th class="th-sm">Pembebanan Dipa</th>
             <th class="th-sm">No ST</th>
@@ -87,12 +87,28 @@
 $('#dtBasicExample').DataTable({
 "ordering": false, // false to disable sorting (or any other option)
 "responsive":true,
+"initComplete": function() {
+    var input = $('.dataTables_filter input').unbind(),
+        self = this.api(),
+        $searchButton = $('<button>')
+          .text('search')
+          .click(function() {
+              self.search(input.val());
+      }),
+        $clearButton = $('<button>')
+          .text('clear')
+          .click(function() {
+              input.val('');
+              $searchButton.click();
+      })
+    $('.dataTables_filter').append($searchButton, $clearButton);
+  },
 "drawCallback" : function(settings){
-            if($('#dtBasicExample_filter input').val().length > 0)
+            if($('#dtBasicExample_filter input').val() = "")
             {
-                $('#dtBasicExample tr').show();
-            } else {
                 $('#dtBasicExample tr').hide();
+            } else {
+                $('#dtBasicExample tr').show();
             }
         }
 });
