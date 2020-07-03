@@ -88,6 +88,9 @@ var table = $('#dtBasicExample').DataTable({
 "ordering": false, // false to disable sorting (or any other option)
 "responsive":true,
 "bInfo" :false,
+"language": {
+            "search": "Masukan No. ST :"
+        },
 "drawCallback" : function(settings){
             if($('#dtBasicExample_filter input').val().length > 5)
             {
