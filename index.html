@@ -114,7 +114,7 @@ var table = $('#dtBasicExample').DataTable({
             "search": "Masukan No. ST :"
         },
 "drawCallback" : function(settings){
-            if($('#dtBasicExample_filter input').val().length > 11)
+            if($('#dtBasicExample_filter input').val().trim().length > 11)
             {
                 $('#dtBasicExample tr').show();
             } else {
