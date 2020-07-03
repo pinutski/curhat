@@ -6,14 +6,22 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PerJaDin</title>
     <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">   
     <link href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.dataTables.min.css" rel="stylesheet">  
     <link href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css" rel="stylesheet"> 
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-      <!-- Table  -->
-      <table id="dtBasicExample" class="stripe hover row-border order-column" cellspacing="0" width="100%">
+  <body class="c-app">
+  <div class="c-sidebar">
+    <!-- Sidebar content here -->
+  </div>
+  <div class="c-wrapper">
+    <header class="c-header">
+      <!-- Header content here -->
+    </header>
+    <div class="c-body">
+      <main class="c-main">
+        <table id="dtBasicExample" class="stripe hover row-border order-column" cellspacing="0" width="100%">
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
@@ -44,17 +52,18 @@
         </tbody>
         <!-- Table body -->
       </table>
-      <!-- Table  -->
-      
-    <!-- Start your project here-->
-    <!-- /Start your project here-->
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
+      </main>
+    </div>
+    <footer class="c-footer">
+      <!-- Footer content here -->
+    </footer>
+  </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.7/js/dataTables.rowReorder.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+    <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
 
 
     <script type="text/javascript">
@@ -112,5 +121,16 @@ $('.dataTables_length').addClass('bs-select');
 $.fn.dataTable.ext.errMode = 'none';
 
     </script>
+</body>
+  <body>
+      <!-- Table  -->
+      
+      <!-- Table  -->
+      
+    <!-- Start your project here-->
+    <!-- /Start your project here-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+
   </body>
 </html>
