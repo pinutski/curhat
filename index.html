@@ -103,14 +103,6 @@ $('#dtBasicExample').DataTable({
       })
     $('.dataTables_filter').append($searchButton, $clearButton);
   }
-"drawCallback" : function(settings){
-            if($('#dtBasicExample_filter input').val() = "")
-            {
-                $('#dtBasicExample tr').hide();
-            } else {
-                $('#dtBasicExample tr').show();
-            }
-        }
 });
 $('.dataTables_length').addClass('bs-select');
 });
