@@ -88,11 +88,11 @@ var table = $('#dtBasicExample').DataTable({
 "ordering": false, // false to disable sorting (or any other option)
 "responsive":true,
 "drawCallback" : function(settings){
-            if($('#dtBasicExample_filter input').val() = "")
+            if($('#dtBasicExample_filter input').val().length > 5)
             {
-                $('#dtBasicExample tr').hide();
-            } else {
                 $('#dtBasicExample tr').show();
+            } else {
+                $('#dtBasicExample tr').hide();
             }
         }
 });
