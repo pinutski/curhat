@@ -29,7 +29,7 @@
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
-            <th class="th-sm">No</th>
+            <th class="th-sm">No.</th>
             <th class="th-sm">Nama</th>
             <th class="th-sm">Pembebanan Dipa</th>
             <th class="th-sm">No ST</th>
@@ -104,27 +104,8 @@ var table = $('#dtBasicExample').DataTable({
 "bInfo" :false,
 "bPaginate" :false,
 "dom":"ftip",
-"columns": [
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false }, 
-    null,
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false }, 
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false }, 
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false },
-    { "searchable": false }, 
-    { "searchable": false },
-    { "searchable": false }
+"columnDefs": [
+    { "searchable": false, "targets": [0,1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18] }
   ],
 "language": {
             "search": "Masukan No. ST :"
