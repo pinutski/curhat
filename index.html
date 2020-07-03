@@ -16,7 +16,7 @@
         <!-- Table head -->
         <thead class="blue-gradient white-text">
           <tr>
-            <th class="th-sm">No.</th>
+            <th class="th-sm">No</th>
             <th class="th-sm">Nama</th>
             <th class="th-sm">Pembebanan Dipa</th>
             <th class="th-sm">No ST</th>
@@ -85,8 +85,16 @@
           
           $(document).ready(function () {
 $('#dtBasicExample').DataTable({
-ordering: false, // false to disable sorting (or any other option)
-responsive:true,
+"ordering": false, // false to disable sorting (or any other option)
+"responsive":true,
+"drawCallback" : function(settings){
+            if($('#dtBasicExample_filter input').val().length > 0)
+            {
+                $('#dtBasicExample tr').show();
+            } else {
+                $('#dtBasicExample tr').hide();
+            }
+        }
 });
 $('.dataTables_length').addClass('bs-select');
 });
